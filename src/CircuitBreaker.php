@@ -38,6 +38,6 @@ class CircuitBreaker {
 
         return array_map(function($breaker) use($exception) {
             return $breaker->closure->__invoke($exception);
-        }, $breakers->toArray());
+        }, $breakers);
     }
 }

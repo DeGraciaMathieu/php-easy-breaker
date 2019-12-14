@@ -23,10 +23,10 @@ class BreakerAggregator
         return $this;
     }    
 
-    public function retrieve(Exception $exception) :Collection
+    public function retrieve(Exception $exception) :array
     {
         return $this->collection->filter(function($breaker) use($exception) {
             return $breaker->exception === get_class($exception);
-        });
+        })->values()->all();
     }       
 }
