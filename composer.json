@@ -1,0 +1,31 @@
+{
+  "name": "degraciamathieu/php-easy-breaker",
+  "description": "PHP implementation of circuit breaker pattern.",
+  "homepage": "https://github.com/DeGraciaMathieu/php-easy-breaker",
+  "license": "MIT",
+  "keywords": [],
+  "authors": [
+    {
+      "name": "De Gracia Mathieu",
+      "email": "contact@degracia-mathieu.fr"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "illuminate/support": "6.2"
+  },
+  "require-dev": {
+      "phpunit/phpunit": "^6.5",
+      "mockery/mockery": "^0.9.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "DeGraciaMathieu\\EasyBreaker\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DeGraciaMathieu\\EasyBreaker\\Tests\\": "tests/"
+    }
+  }
+}
