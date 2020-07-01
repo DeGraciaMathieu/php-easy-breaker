@@ -8,7 +8,6 @@
          convertWarningsToExceptions="true"
          processIsolation="false"
          stopOnFailure="false"
-         syntaxCheck="false"
 >
     <testsuites>
         <testsuite name="Test Suite">
@@ -20,7 +19,7 @@
         <log type="testdox-text" target="tests/reports/testdox.txt"/>
     </logging>
     <filter>
-        <whitelist processUncoveredFilesFromWhitList="true">
+        <whitelist>
             <directory suffix=".php">./src/</directory>
         </whitelist>
     </filter>

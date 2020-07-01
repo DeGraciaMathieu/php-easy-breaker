@@ -7,9 +7,9 @@ use PHPUnit\Framework\TestCase;
 use DeGraciaMathieu\EasyBreaker\Breaker;
 use DeGraciaMathieu\EasyBreaker\CircuitBreaker;
 
-class CircuitBreakerTest extends TestCase 
+class CircuitBreakerTest extends TestCase
 {
-    /** 
+    /**
      * @test
      */
     public function process_with_break()
@@ -27,13 +27,13 @@ class CircuitBreakerTest extends TestCase
             });
 
 
-        $this->assertNotNull($results);        
-        $this->assertEquals(2, count($results)); 
-        $this->assertEquals($results[0], "it's realy broken."); 
-        $this->assertEquals($results[1], "it's realy realy broken."); 
+        $this->assertNotNull($results);
+        $this->assertCount(2, $results);
+        $this->assertEquals($results[0], "it's realy broken.");
+        $this->assertEquals($results[1], "it's realy realy broken.");
     }
 
-    /** 
+    /**
      * @test
      */
     public function process_without_break()
@@ -47,7 +47,7 @@ class CircuitBreakerTest extends TestCase
             });
 
 
-        $this->assertnull($results);        
+        $this->assertNull($results);
     }
 
     /**
@@ -71,5 +71,5 @@ class CircuitBreakerTest extends TestCase
             ->do(function(Exception $e) use($message) {
                 return $message;
             });
-    }    
+    }
 }
