@@ -1,6 +1,6 @@
 <?php
 
-namespace DeGraciaMathieu\Clike\Tests;
+namespace DeGraciaMathieu\EasyBreaker\Tests;
 
 use Exception;
 use PHPUnit\Framework\TestCase;
@@ -28,7 +28,7 @@ class CircuitBreakerTest extends TestCase
 
 
         $this->assertNotNull($results);
-        $this->assertEquals(2, count($results));
+        $this->assertCount(2, $results);
         $this->assertEquals($results[0], "it's really broken.");
         $this->assertEquals($results[1], "it's really really broken.");
     }
@@ -47,7 +47,7 @@ class CircuitBreakerTest extends TestCase
             });
 
 
-        $this->assertnull($results);
+        $this->assertNull($results);
     }
 
     /**
