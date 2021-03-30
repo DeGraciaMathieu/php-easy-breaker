@@ -9,7 +9,7 @@ use DeGraciaMathieu\EasyBreaker\BreakerAggregator;
 
 class CircuitBreaker {
 
-    protected BreakerAggregator $breakerAggregator;
+    protected $breakerAggregator;
 
     public function __construct()
     {

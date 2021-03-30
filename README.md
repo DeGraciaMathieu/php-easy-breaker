@@ -1,11 +1,3 @@
-<p align="center">
-<a href="https://travis-ci.org/DeGraciaMathieu/php-easy-breaker"><img src="https://travis-ci.org/DeGraciaMathieu/php-easy-breaker.svg?branch=master" alt="Build Status"></a>
-<a href="https://scrutinizer-ci.com/g/DeGraciaMathieu/php-easy-breaker/?branch=master"><img src="https://scrutinizer-ci.com/g/DeGraciaMathieu/php-easy-breaker/badges/coverage.png?b=master" alt="Code Coverage"></a>
-<img src="https://img.shields.io/travis/php-v/DeGraciaMathieu/php-easy-breaker.svg" alt="PHP range">
-<a href="https://packagist.org/packages/degraciamathieu/php-easy-breaker"><img src="https://img.shields.io/packagist/v/degraciamathieu/php-easy-breaker.svg?style=flat-square" alt="Latest Version on Packagist"></a>
-<a href='https://packagist.org/packages/degraciamathieu/php-easy-breaker'><img src='https://img.shields.io/packagist/dt/degraciamathieu/php-easy-breaker.svg?style=flat-square' /></a>
-</p>
-
 # degraciamathieu/php-easy-breaker
 
 PHP implementation of circuit breaker pattern.

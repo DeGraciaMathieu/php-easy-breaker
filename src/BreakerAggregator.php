@@ -9,7 +9,7 @@ use DeGraciaMathieu\EasyBreaker\BreakerAggregator;
 
 class BreakerAggregator
 {
-    protected Collection $collection;
+    protected $collection;
 
     public function __construct()
     {
