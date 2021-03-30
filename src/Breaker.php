@@ -6,7 +6,7 @@ use Closure;
 
 class Breaker {
 
-    public string $exception;
+    public $exception;
     public $closure;
 
     public function when(string $exception) :Breaker
