@@ -16,14 +16,14 @@ class CircuitBreaker {
         $this->breakerAggregator = new BreakerAggregator();
     }
 
-    public function addBreaker(Breaker $breaker) :CircuitBreaker
+    public function addBreaker(Breaker $breaker): CircuitBreaker
     {
         $this->breakerAggregator->add($breaker);
 
         return $this;
     }
 
-    public function closure(Closure $closure) :?array
+    public function closure(Closure $closure)
     {   
         try {
             return $closure();
@@ -32,7 +32,7 @@ class CircuitBreaker {
         }
     }
 
-    protected function saveMyBacon(Exception $exception) :array
+    protected function saveMyBacon(Exception $exception): array
     {
         $breakers = $this->breakerAggregator->retrieve($exception);
 

@@ -9,14 +9,14 @@ class Breaker {
     public $exception;
     public $closure;
 
-    public function when(string $exception) :Breaker
+    public function when(string $exception): Breaker
     {
         $this->exception = $exception;
 
         return $this;
     }
 
-    public function do(Closure $closure) :Breaker
+    public function do(Closure $closure): Breaker
     {
         $this->closure = $closure;
 

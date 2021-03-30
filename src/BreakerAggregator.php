@@ -16,17 +16,20 @@ class BreakerAggregator
         $this->collection = new Collection;
     }
 
-    public function add(Breaker $breaker) :BreakerAggregator
+    public function add(Breaker $breaker): BreakerAggregator
     {
         $this->collection->push($breaker);
 
         return $this;
     }    
 
-    public function retrieve(Exception $exception) :array
+    public function retrieve(Exception $exception): array
     {
-        return $this->collection->filter(function($breaker) use($exception) {
-            return $breaker->exception === get_class($exception);
-        })->values()->all();
+        return $this->collection
+            ->filter(function($breaker) use($exception) {
+                return $breaker->exception === get_class($exception);
+            })
+            ->values()
+            ->all();
     }       
 }
